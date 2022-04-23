@@ -1,0 +1,28 @@
+.hash-link {
+  opacity: 0;
+  padding-left: 0.5rem;
+  transition: opacity var(--ifm-transition-fast);
+  user-select: none;
+}
+
+.hash-link::before {
+  content: '#';
+}
+
+.hash-link:focus,
+*:hover > .hash-link {
+  opacity: 1;
+}
+
+/*
+When the navbar is sticky, ensure that on anchor click,
+the browser does not scroll that anchor behind the navbar
+See https://twitter.com/JoshWComeau/status/1332015868725891076
+ */
+.anchorWithStickyNavbar {
+  scroll-margin-top: calc(3.75rem + 0.5rem);
+}
+
+.anchorWithHideOnScrollNavbar {
+  scroll-margin-top: 0.5rem;
+}

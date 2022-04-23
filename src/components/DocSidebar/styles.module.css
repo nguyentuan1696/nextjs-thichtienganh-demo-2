@@ -1,0 +1,87 @@
+@media (min-width: 997px) {
+	.sidebar {
+		display: flex;
+		flex-direction: column;
+		max-height: 100vh;
+		height: 100%;
+		position: sticky;
+		top: 0;
+		padding-top: var(--navbar-height);
+		width: var(--doc-sidebar-width);
+		transition: opacity 50ms ease;
+	}
+
+	.sidebarWithHideableNavbar {
+		padding-top: 0;
+	}
+
+	.sidebarHidden {
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+	}
+
+	.sidebarLogo {
+		display: flex !important;
+		align-items: center;
+		margin: 0 var(--spacing-horizontal);
+		min-height: var(--navbar-height);
+		max-height: var(--navbar-height);
+		color: inherit !important;
+		text-decoration: none !important;
+	}
+
+	.sidebarLogo img {
+		margin-right: 0.5rem;
+		height: 2rem;
+	}
+
+	.menu {
+		flex-grow: 1;
+		padding: 0.5rem;
+	}
+
+	.menuWithAnnouncementBar {
+		margin-bottom: var(--docusaurus-announcement-bar-height);
+	}
+
+	.collapseSidebarButton {
+		display: block !important;
+		background-color: var(--button-background-color);
+		height: 40px;
+		position: sticky;
+		bottom: 0;
+		border-radius: 0;
+		border: 1px solid var(--color-emphasis-300);
+	}
+
+	.collapseSidebarButtonIcon {
+		transform: rotate(180deg);
+		margin-top: 4px;
+	}
+
+	[dir='rtl'] .collapseSidebarButtonIcon {
+		transform: rotate(0);
+	}
+}
+
+.sidebarLogo,
+.collapseSidebarButton {
+	display: none;
+}
+
+.sidebarMenuIcon {
+	vertical-align: middle;
+}
+
+.sidebarMenuCloseIcon {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 24px;
+	font-size: 1.5rem;
+	font-weight: var(--font-weight-bold);
+	line-height: 0.9;
+	width: 24px;
+}

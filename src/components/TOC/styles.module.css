@@ -1,0 +1,52 @@
+.tableOfContents {
+  max-height: calc(100vh - (var(--navbar-height) + 2rem));
+  overflow-y: auto;
+  position: sticky;
+  top: calc(var(--navbar-height) + 1rem);
+}
+
+@media (max-width: 996px) {
+  .tableOfContents {
+    display: none;
+  }
+
+  .docItemContainer {
+    padding: 0 0.3rem;
+  }
+}
+
+.table-of-contents {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  padding: 0.5rem 0;
+
+  @media print {
+    display: none;
+  }
+
+  &,
+  ul {
+    list-style: none;
+    padding-left: 0.5rem;
+  }
+
+  li {
+    margin: 0.5rem 0.5rem;
+  }
+
+  &__left-border {
+    border-left: 1px solid var(--color-emphasis-300);
+  }
+
+  &__link {
+    color: var(--color-content-secondary);
+
+    &:hover,
+    &:hover code,
+    &--active,
+    &--active code {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+  }
+}

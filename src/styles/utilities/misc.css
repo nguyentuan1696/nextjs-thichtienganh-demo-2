@@ -1,0 +1,31 @@
+.clean-btn {
+	background: none;
+	border: none;
+	color: inherit;
+	cursor: pointer;
+	font-family: inherit;
+	padding: 0;
+}
+
+.close {
+	color: var(--color-black);
+  float: right;
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  opacity: 0.5;
+  padding: 1rem;
+  @mixin transition opacity;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+body:not(.navigation-with-keyboard) *:not(input):focus {
+  outline: none;
+}
